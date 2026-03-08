@@ -14,6 +14,75 @@ products:
 - azure-monitor
 - azure-pipelines
 - aspnet-core
+https://github.com/enterprises/rcwstoreconst fetch = require('node-fetch');
+
+const jokeTypes = ['Programming', 'Miscellaneous', 'Dark', 'Spooky', 'Christmas'];
+
+async function getRandomJoke() {
+    const jokeType = jokeTypes[Math.floor(Math.random() * jokeTypes.length)];
+    const url = `https://v2.jokeapi.dev/joke/${jokeType}`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const jokeData = await response.json();
+
+        if (jokeData.type === 'single') {
+            console.log(`Joke: ${jokeData.joke}`);
+        } else {
+            console.log(`Setup: ${jokeData.setup}`);
+            console.log(`Delivery: ${jokeData.delivery}`);
+        }
+    } catch (error) {
+        console.error(`Failed to fetch a joke: ${error.message}`);
+    }
+}
+
+getRandomJoke();# Advanced Security Initialize CodeQL v1
+# Initializes the CodeQL database in preparation for building.
+- task: AdvancedSecurity-Codeql-Init@1
+  inputs:
+    #enableAutomaticCodeQLInstall: false # boolean. Enable automatic CodeQL detection and installation. Default: false.
+    #languages: # 'csharp' | 'cpp' | 'go' | 'java' | 'javascript' | 'python' | 'ruby' | 'rust' | 'swift'. Languages to analyze. 
+    #querysuite: 'Select a query suite...' # 'Select a query suite...' | 'code-scanning' | 'security-extended' | 'security-experimental' | 'security-and-quality'. CodeQL Query Suite to use for analysis. Default: Select a query suite....
+    #buildtype: 'Manual' # 'Manual' | 'None'. Select build mode (manual vs none). Default: Manual.
+  # Advanced
+    #ram: # string. Options to control RAM usage in MB. 
+    #threads: # string. Use this many threads to evaluate queries. 
+    #codeqlpathstoignore: # string. Set a list of paths to exclude in the CodeQL analysis. 
+    #codeqlpathstoinclude: # string. Set a list of additional paths to include in the CodeQL analysis. 
+    #sourcesfolder: # string. Sets the folder that contains the sources to be analyzed. 
+    #loglevel: '_' # '0' | '1' | '2' | '_'. Set the log level for the CodeQL analysis. Default: _.
+    #configfilepath: # string. Use this to enable custom query analysis in codeql (path must be absolute). 
+    #codeqltoolsdirectory: # string. Set a custom CodeQL tools directory (path must be absolute).from markitdown import MarkItDown
+
+md = MarkItDown(enable_plugins=False) # Set to True to enable plugins
+result = md.convert("test.xlsx")
+print(result.text_content)markitdown --list-pluginspip install 'markitdown[pdf, docx, pptx]'cat path-to-file.pdf | markitdownmarkitdown path-to-file.pdf -o document.mdmarkitdown path-to-file.pdf > document.mdgit clone git@github.com:microsoft/markitdown.git
+cd markitdown
+pip install -e 'packages/markitdown[all]'https://docs.github.com/api/article/body?pathname=/en/authentication/securing-your-account-with-two-factor-authentication-2fa/accessing-github-using-two-factor-authentication            - ad: Önbellek
+  uses: actions/cache@v5.0.3
+  ile:
+    # Önbelleğe alınacak ve geri yüklenecek dosyaların, dizinlerin ve joker karakter kalıplarının listesi
+    yol:
+    # Önbelleği geri yüklemek ve kaydetmek için açık bir anahtar
+    anahtar:
+    # Önekle eşleşen anahtarları listeleyen sıralı çok satırlı bir dize; bu dize, anahtar için önbellek isabeti gerçekleşmediğinde eski önbelleği geri yüklemek için kullanılır. `cache-hit` bu durumda false döndürür.
+    geri yükle: # isteğe bağlı
+    # Yükleme sırasında büyük dosyaları bölmek için kullanılan öbek boyutu (bayt cinsinden).
+    yükleme-parça-boyutu: # isteğe bağlı
+    # İsteğe bağlı bir boolean değeri; etkinleştirildiğinde, Windows çalıştırıcılarının diğer platformlarda sırasıyla geri yüklenebilen veya kaydedilebilen önbellekleri kaydetmesine veya geri yüklemesine olanak tanır.
+    enableCrossOsArchive: # isteğe bağlı, varsayılan değer false
+    # Önbellek girdisi bulunamazsa iş akışını başarısız kıl
+    fail-on-cache-miss: # isteğe bağlı, varsayılan değer false
+    # Önbelleği indirmeden, verilen girdiler (anahtar, geri yükleme anahtarları) için önbellekte bir giriş olup olmadığını kontrol edin.
+    lookup-only: # isteğe bağlı, varsayılan değer false
+    # Önceki bir adım başarısız olsa bile önbelleği kaydetmek için son adımı çalıştırın
+    save-always: # isteğe bağlı, varsayılan değer false
+          [![Proof HTML](https://github.com/rcwstoreoutlook-onmicrosoft-com/Rcw/actions/workflows/proof-html.yml/badge.svg?event=check_run)](https://github.com/rcwstoreoutlook-onmicrosoft-com/Rcw/actions/workflows/proof-html.yml)[![Proof HTML](https://github.com/rcwstoreoutlook-onmicrosoft-com/Rcw/actions/workflows/proof-html.yml/badge.svg)](https://github.com/rcwstoreoutlook-onmicrosoft-com/Rcw/actions/workflows/proof-html.yml)
 urlFragment: todo-csharp-sql
 name: React Web App with C# API and SQL Database on Azure
 description: A complete ToDo app with C# API and Azure SQL database for storage. Uses Azure Developer CLI (azd) to build, deploy, and monitor
